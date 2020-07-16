@@ -1,11 +1,19 @@
 import VideoList from "./VideoList.js"
+import exampleVideoData from '../data/exampleVideoData.js';
 
 class App extends React.Component{
 
   constructor(props) {
     super(props)
+    this.state ={
+      videos : exampleVideoData
+    }
+
   }
+
+
     render(){
+      console.log(this);
       return (<div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
@@ -18,7 +26,7 @@ class App extends React.Component{
           </div>
           <div className="col-md-5">
             {/* need to import exampleVideoData to access it */}
-            <div><h5><VideoList videos={this.props.exampleVideoData}/></h5></div>
+            <div><h5><VideoList videos={this.state.videos}/></h5></div>
           </div>
         </div>
       </div>)
