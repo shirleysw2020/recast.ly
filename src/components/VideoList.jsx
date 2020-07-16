@@ -4,7 +4,8 @@ var VideoList = (props) => (
   // <div className="video-list">
     <div className="video-list">
       {props.videos.map(video =>
-      <VideoListEntry video={video} />
+      // whatever you click inside onClick is going to be invoke
+      <VideoListEntry handleClick={props.handleClick} video={video} />
       )}
     </div>
 );
